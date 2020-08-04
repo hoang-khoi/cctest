@@ -1,5 +1,5 @@
 # ktools
-My personaly tools for sport programming.
+My simple personal supporting scripts for sport programming in C++.
 
 ## Scripts
 ### knew
@@ -33,10 +33,10 @@ PASSED!
 ```
 or
 ```
-Compiling	1.026
+Compiling	1.036
 Executing	0.002
 Comparing...
-PASSED!
+FAILED!
 ```
 
 ## Installation
