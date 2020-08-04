@@ -7,8 +7,8 @@ RED="\033[0;31m"
 GREEN="\033[0;32m"
 NOCOLOR="\033[0m"
 
-if test "$#" -lt 1; then
-    echo "Please provide the source code"
+if ! test -f "src.cc"; then
+    echo "No source file src.cc"
     exit 1
 fi
 
@@ -23,7 +23,7 @@ if ! test -f "exp.txt"; then
 fi
 
 echo -en "Compiling\t"
-time g++ -std=c++11 -O2 -Wall $1 -o /tmp/cctest_exe
+time g++ -std=c++11 -O2 -Wall src.cc -o /tmp/cctest_exe
 
 echo -en "Executing\t"
 time /tmp/cctest_exe in.txt < in.txt > out.txt

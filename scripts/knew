@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if test "$#" -lt 1; then
+    echo "Please provide a name"
+    exit 1
+fi
+
+if test -d $1; then
+    echo "Solution already existed"
+    exit 1
+fi
+
+mkdir $1/
+cd $1/
+
+cat > src.cc <<EOL
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+}
+EOL
+
+touch in.txt
+touch exp.txt

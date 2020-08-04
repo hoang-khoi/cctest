@@ -1,10 +1,45 @@
-# CCTEST
-A dead-simple C++ execution & test script.
+# ktools
+My personaly tools for sport programming.
 
-## Usage
-Have one input file `in.txt`, expectation file `exp.txt` and your source code
-`solution.cc` ready. Then, to test, just execute
-    cctest solution.cc
+## Scripts
+### knew
+Create a new project which includes:
+    * A source `src.cc` file.
+    * An input `in.txt` file.
+    * An expected output `exp.txt` file.
+
+```
+$ knew solution
+$ cd solution
+$ ls
+
+exp.txt  in.txt  src.cc
+```
+
+### ktest
+When you finished writing the solution and provided test cases in `in.txt` and
+expected output `exp.txt`. Then run
+
+```
+knew
+```
+
+Possible output
+```
+Compiling	1.026
+Executing	0.002
+Comparing...
+PASSED!
+```
+or
+```
+Compiling	1.026
+Executing	0.002
+Comparing...
+PASSED!
+```
 
 ## Installation
-    ./install
+```
+./install.sh
+```

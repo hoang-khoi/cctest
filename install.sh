@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo cp cctest /usr/local/bin/
+sudo cp scripts/* /usr/local/bin/
