@@ -14,6 +14,8 @@ mkdir $1/
 cd $1/
 
 cat > src.cc <<EOL
+// vim:set ts=2 sw=2 expandtab:
+
 #include <bits/stdc++.h>
 using namespace std;
 
