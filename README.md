@@ -20,6 +20,9 @@ exp.txt  in.txt  src.cc
 When you finished writing the solution and provided test cases in `in.txt` and
 expected output `exp.txt`. Then run
 
+Available options:
+* `-c`: Skip comparison
+
 ```
 knew
 ```
