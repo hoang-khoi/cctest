@@ -7,6 +7,8 @@ RED="\033[0;31m"
 GREEN="\033[0;32m"
 NOCOLOR="\033[0m"
 
+flgcmp=true
+
 if ! test -f "src.cc"; then
     echo "No source file src.cc"
     exit 1
@@ -22,14 +24,26 @@ if ! test -f "exp.txt"; then
     exit 1
 fi
 
+while getopts "c" opt; do
+    case $opt in
+    c)
+        flgcmp=false
+        ;;
+    esac
+done
+
 echo -en "Compiling\t"
 time g++ -std=c++11 -O2 -Wall src.cc -o /tmp/cctest_exe
 
 echo -en "Executing\t"
 time /tmp/cctest_exe in.txt < in.txt > out.txt
 
+
 echo "Comparing..."
-if cmp -s exp.txt out.txt; then
+
+if ! $flgcmp; then
+    echo -e "${GREEN}SKIPPED!${NOCOLOR}"
+elif cmp -s exp.txt out.txt; then
    echo -e "${GREEN}PASSED!${NOCOLOR}"
 else
     echo -e "${RED}FAILED!${NOCOLOR}"
