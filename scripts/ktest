@@ -36,7 +36,7 @@ echo -en "Compiling\t"
 time g++ -std=c++11 -O2 -Wall src.cc -o /tmp/cctest_exe
 
 echo -en "Executing\t"
-time /tmp/cctest_exe in.txt < in.txt > out.txt
+time /tmp/cctest_exe < in.txt > out.txt
 
 
 echo "Comparing..."
