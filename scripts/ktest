@@ -43,6 +43,8 @@ echo "Comparing..."
 
 if ! $flgcmp; then
     echo -e "${GREEN}SKIPPED!${NOCOLOR}"
+    echo
+    cat out.txt
 elif cmp -s exp.txt out.txt; then
    echo -e "${GREEN}PASSED!${NOCOLOR}"
 else
