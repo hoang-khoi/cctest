@@ -42,6 +42,12 @@ Comparing...
 FAILED!
 ```
 
+### krun
+Compiles and run any cc file
+```
+krun main.cc
+```
+
 ## Installation
 ```
 ./install.sh
