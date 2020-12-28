@@ -15,7 +15,14 @@ cd $1/
 
 cat > src.cc <<EOL
 #include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+
 using namespace std;
+
+void solve() {
+}
 
 int main() {
 }
