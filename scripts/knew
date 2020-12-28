@@ -18,6 +18,7 @@ cat > src.cc <<EOL
 #include <algorithm>
 #include <cmath>
 #include <vector>
+#include <climits>
 
 using namespace std;
 
