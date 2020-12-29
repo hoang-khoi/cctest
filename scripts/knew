@@ -19,6 +19,8 @@ cat > src.cc <<EOL
 #include <cmath>
 #include <vector>
 #include <climits>
+#include <stack>
+#include <queue>
 
 using namespace std;
 
