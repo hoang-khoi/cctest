@@ -23,6 +23,7 @@ cat > src.cc <<EOL
 #include <queue>
 #include <unordered_map>
 #include <unordered_set>
+#include <sstream>
 
 using namespace std;
 
