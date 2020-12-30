@@ -28,6 +28,7 @@ void solve() {
 }
 
 int main() {
+  cout << "TODO: call solve()" << endl;
 }
 EOL
 
